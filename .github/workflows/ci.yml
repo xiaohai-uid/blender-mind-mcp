@@ -1,0 +1,25 @@
+﻿name: Truth Ladder CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Truth Ladder Test Suites (L1, L2, L3, L4)
+        run: npm test
+      - name: Run Physical Live End-to-End Test
+        run: npm run test:live

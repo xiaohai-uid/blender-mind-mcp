@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "om": {
+      "command": "node",
+      "args": [
+        "C:/Users/a1691/Documents/Obsidian Mind/.claude/scripts/om-mcp.mjs"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "blender-mind-mcp",
+  "version": "1.0.0",
+  "description": "Production-grade 3D Modeling and Blender MCP Server following Hexagonal Architecture",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning --experimental-strip-types src/index.ts",
+    "test": "node --disable-warning=ExperimentalWarning --experimental-strip-types tests/run_tests.ts",
+    "test:live": "node --disable-warning=ExperimentalWarning --experimental-strip-types tests/live_physical_test.ts"
+  },
+  "keywords": ["mcp", "blender", "3d-modeling", "agentic-ai"],
+  "author": "",
+  "license": "MIT"
+}
