@@ -59,6 +59,8 @@ blender-mind-mcp/
 5. In the 3D Viewport, press `N` to open the sidebar, click the **Blender MCP** tab, and click **Start MCP Server**.
 
 ### 2. Configure MCP Client (Antigravity / Claude / Codex)
+Clone the repository, then run `npm test` from its root with Node.js 24. For the client configuration below, replace the example path with the absolute path to `src/index.ts` in your clone. On Windows, `Resolve-Path src/index.ts` prints it.
+
 Add to your project or global MCP configuration (`.mcp.json`):
 
 ```json
@@ -69,7 +71,7 @@ Add to your project or global MCP configuration (`.mcp.json`):
       "args": [
         "--disable-warning=ExperimentalWarning",
         "--experimental-strip-types",
-        "C:/Users/a1691/Documents/antigravity/noble-hypatia/src/index.ts"
+        "/absolute/path/to/blender-mind-mcp/src/index.ts"
       ]
     }
   }
@@ -77,6 +79,8 @@ Add to your project or global MCP configuration (`.mcp.json`):
 ```
 
 ---
+
+With the add-on running, ask your MCP client to call `blender_inspect_scene` and list the objects. Compare the names with the Outliner in the open Blender file before asking it to edit the scene.
 
 ## 🛠️ 10 Core MCP Tools
 
